@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import SupabaseStatus from "@/components/SupabaseStatus";
+import AuthNavButton from "@/components/AuthNavButton";
 import {
   ShoppingCart,
   TrendingDown,
@@ -81,6 +82,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-2">
+            <AuthNavButton />
             <PwaInstallButton />
           </div>
         </div>
