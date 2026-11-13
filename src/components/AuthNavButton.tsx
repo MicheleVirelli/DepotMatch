@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import { LogIn, UserCheck } from "lucide-react";
 
 export default function AuthNavButton() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -27,10 +26,9 @@ export default function AuthNavButton() {
     return (
       <Link
         href="/dashboard"
-        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-semibold transition-all shadow-md shadow-emerald-500/20"
+        className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium rounded transition-colors"
       >
-        <UserCheck className="w-3.5 h-3.5" />
-        <span>Area Riservata</span>
+        Supermercati
       </Link>
     );
   }
@@ -38,10 +36,9 @@ export default function AuthNavButton() {
   return (
     <Link
       href="/login"
-      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-semibold transition-all shadow-md shadow-emerald-500/20"
+      className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium rounded transition-colors"
     >
-      <LogIn className="w-3.5 h-3.5" />
-      <span>Accedi</span>
+      Accedi
     </Link>
   );
 }
